@@ -1,4 +1,4 @@
-# Título del Manual: [Título Descriptivo del Manual]
+# Manual de configuración
 
 **Introducción:**
 
