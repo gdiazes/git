@@ -1,84 +1,57 @@
-# Manual de configuración
+# Manual: Configuración Inicial de Git
 
 **Introducción:**
 
-* Explica brevemente el propósito de este manual y lo que el lector aprenderá.
-* Menciona cualquier requisito previo (por ejemplo, tener Git instalado).
-* Establece el contexto sobre cuándo este manual sería más útil.
+Este manual te guiará a través de los primeros pasos para configurar Git en tu sistema. Aprenderás cómo instalar Git (si aún no lo tienes) y cómo establecer tu identidad para que tus contribuciones sean correctamente atribuidas en tus proyectos. Esta configuración inicial es fundamental para comenzar a utilizar Git de manera efectiva.
 
 **Tabla de Contenidos:**
 
-* Utiliza la generación automática de tabla de contenidos de Markdown si tu plataforma lo soporta (por ejemplo, `[TOC]`). De lo contrario, lista manualmente las secciones principales con enlaces (si aplica).
+* [Instalación de Git](#instalacion-de-git)
+* [Configuración de tu Identidad en Git](#configuracion-de-tu-identidad-en-git)
+    * [Establecer tu Nombre de Usuario](#establecer-tu-nombre-de-usuario)
+    * [Establecer tu Dirección de Correo Electrónico](#establecer-tu-direccion-de-correo-electronico)
+    * [Verificar tu Configuración](#verificar-tu-configuracion)
+* [Configuración Opcional: Editor de Texto Predeterminado](#configuracion-opcional-editor-de-texto-predeterminado)
+* [Resumen](#resumen)
+* [Palabras Clave](#palabras-clave)
 
-**[Título de la Sección Principal 1]:**
+## Instalación de Git
 
-* **[Paso 1: Título Claro y Orientado a la Acción]**
-    * Explicación detallada del paso.
-    * Proporciona el comando(s) exacto de Git a utilizar dentro de un bloque de código:
+Si aún no tienes Git instalado en tu computadora, sigue las instrucciones correspondientes a tu sistema operativo:
+
+* **Windows:**
+    * Ve a la página de descarga de Git para Windows: [https://git-scm.com/download/win](https://git-scm.com/download/win)
+    * La descarga debería comenzar automáticamente.
+    * Una vez descargado, ejecuta el instalador (`.exe`) y sigue las instrucciones en pantalla. Generalmente, las opciones predeterminadas son adecuadas para la mayoría de los usuarios.
+
+* **macOS:**
+    * **Opción 1 (Recomendada): Utilizando Homebrew:** Si tienes Homebrew instalado, abre tu Terminal y ejecuta el siguiente comando:
         ```bash
-        comando git -opciones argumento
+        brew install git
         ```
-    * Explica el comando, sus opciones y argumentos.
-    * Muestra ejemplos de entrada y salida esperada (si es relevante).
-    * Incluye capturas de pantalla o ayudas visuales si son útiles (aunque estos manuales probablemente se centrarán en la línea de comandos).
+    * **Opción 2: Instalador:** Ve a la página de descarga de Git para macOS: [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+        * Descarga el instalador y sigue las instrucciones.
+    * **Opción 3: Xcode Command Line Tools:** Si tienes Xcode instalado, Git podría ya estar presente. Abre tu Terminal y prueba ejecutar `git --version`. Si no está instalado, se te ofrecerá instalar las Command Line Tools, que incluyen Git.
 
-* **[Paso 2: Título Claro y Orientado a la Acción]**
-    * ... (Sigue el mismo formato que el Paso 1)
-
-* ... (Continúa con los pasos siguientes)
-
-**[Título de la Sección Principal 2]:**
-
-* ... (Sigue la misma estructura que la Sección Principal 1)
-
-**Consideraciones Importantes/Solución de Problemas:**
-
-* Lista problemas o errores comunes que los usuarios podrían encontrar.
-* Proporciona soluciones breves o consejos para la resolución de problemas.
-* Incluye cualquier nota importante o mejores prácticas relacionadas con el tema.
-
-**Resumen:**
-
-* Recapitula brevemente lo que el lector ha aprendido en este manual.
-* Menciona los siguientes pasos lógicos o manuales relacionados que podrían querer consultar.
-
-**Palabras Clave:**
-
-* Lista palabras clave relevantes para ayudar a los usuarios a encontrar este manual (por ejemplo, git, repositorio, clonar, push, ssh, https).
-
----
-
-**Ejemplo de cómo usar esta plantilla para un paso (en español):**
-
-**Título del Manual: Configuración de Git y Creación de tu Primer Repositorio**
-
-**[Sección Principal: Configuración Básica de Git]**
-
-* **Paso 1: Establecer tu Nombre de Usuario**
-    * Git registra el autor de cada commit, y tu nombre de usuario forma parte de esta información. Es importante establecer tu nombre de usuario correctamente.
-    * Abre tu terminal o símbolo del sistema.
-    * Ejecuta el siguiente comando, reemplazando `"Tu Nombre"` con tu nombre real:
+* **Linux (Debian/Ubuntu):**
+    * Abre tu Terminal y ejecuta el siguiente comando:
         ```bash
-        git config --global user.name "Tu Nombre"
-        ```
-    * La opción `--global` establece este nombre de usuario para todos tus repositorios Git en tu sistema. Si deseas establecerlo solo para un repositorio específico, navega al directorio de ese repositorio en la terminal y ejecuta el comando sin `--global`.
-    * **Ejemplo:**
-        ```bash
-        git config --global user.name "Alicia Pérez"
-        ```
-    * Para verificar tu nombre de usuario configurado, puedes ejecutar:
-        ```bash
-        git config user.name
+        sudo apt update
+        sudo apt install git
         ```
 
-**Elementos Clave para Enfatizar en tus Manuales (en español):**
+* **Linux (Fedora/CentOS/RHEL):**
+    * Abre tu Terminal y ejecuta el siguiente comando:
+        ```bash
+        sudo dnf install git
+        ```
 
-* **Claridad:** Utiliza un lenguaje sencillo y directo, evitando la jerga innecesaria.
-* **Títulos Accionables:** Haz que los títulos de los pasos indiquen claramente lo que el usuario necesita hacer.
-* **Bloques de Código:** Utiliza bloques de código para todos los comandos de Git para que sean fácilmente identificables.
-* **Explicación:** No solo proporciones el comando; explica qué hace y por qué es necesario.
-* **Ejemplos:** Proporciona ejemplos concretos para ilustrar los conceptos.
-* **Solución de Problemas:** Anticipa problemas comunes y ofrece soluciones.
-* **Consistencia:** Utiliza un formato consistente en todos tus manuales.
+    * O para CentOS/RHEL:
+        ```bash
+        sudo yum install git
+        ```
 
-Con esta plantilla y el ejemplo en español, estás listo para comenzar a redactar tus manuales de Git. ¿Cuál te gustaría empezar a escribir ahora?
+Una vez instalado, puedes verificar la instalación abriendo tu terminal o símbolo del sistema y ejecutando:
+
+```bash
+git --version
